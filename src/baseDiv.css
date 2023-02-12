@@ -1,0 +1,32 @@
+*{
+    background-color: red;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+.content {
+    background: green;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.menu_tab {
+    background-color: orange;
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    
+}
+
+.task_tab {
+    background-color: blue;
+    padding: 10px;
+    flex: 8;
+
+}
