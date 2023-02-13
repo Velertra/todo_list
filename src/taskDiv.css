@@ -1,11 +1,8 @@
-#task_tab {
-    display: flex;
-}
+
 
 .task_array {
     background-color: green;
-    margin: 10vmin;
-    padding: 10vmin;
-    flex-wrap: wrap;
+    margin: 8vmin;
+    padding: 8vmin;
 
 }
