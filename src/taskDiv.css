@@ -2,7 +2,9 @@
 
 .task_array {
     background-color: green;
-    margin: 8vmin;
-    padding: 8vmin;
+    margin: 4vmin;
+    padding: 4vmn;
+    height: 15vmin;
+    width: 15vmin;
 
 }

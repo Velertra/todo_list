@@ -1,18 +1,27 @@
+import {BtnFunct} from "./btnFunct"
 
-class Taskdiv {
+
+const Taskdiv = {
+
     multiTasks() {
-        let arrayTask = ["first task", "second task"];
+     
+        /* let testing = new BtnFunct();
+        testing.collectValues();
+        
+        console.log(testing.collectValues());
+        */
 
-        for(let i = 0; i < 30/* arrayTask.length */; i++) {
+       /*  for(let i = 0; i <  this.taskArray.length ; i++) {
                 let content = document.createElement("div");
                 content.setAttribute("id", "task_array");
                 content.classList.add("task_array");
                 task_tab.appendChild(content) 
-        };
-    };
+        };  */
+    },
+
 
 }
 
-let taskDiv = new Taskdiv();
+let knowing = Taskdiv;
 
-taskDiv.multiTasks();
+export {Taskdiv};

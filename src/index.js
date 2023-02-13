@@ -9,7 +9,7 @@ import "./menuDiv.js";
 
 import "./menuDiv.css";
 
-import "./taskDiv";
+import "./taskDiv.js";
 
 import "./taskDiv.css";
 
@@ -17,3 +17,6 @@ import "./btnFunct";
 
 
 import "./taskBtn";
+
+
+
