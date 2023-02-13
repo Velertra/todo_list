@@ -3,7 +3,6 @@ import {Taskdiv} from "./taskDiv"
 class BtnFunct {
     addTask() {
         document.querySelector("#add_task").addEventListener('click', () => {
-            
             this.openForm();
         })
     }
@@ -11,7 +10,6 @@ class BtnFunct {
         submitBtn() {
           document.getElementById("pop_up_form").addEventListener ('submit', function(event) {
             event.preventDefault();
-            
             let submitCallBtn = new BtnFunct();
             submitCallBtn.submitCall();
             
@@ -39,6 +37,7 @@ class BtnFunct {
             this.taskArray.push(this.discribe);
            this.arrayPush();
 
+
            // console.log(this.taskArray)
 
             //this.arrayPush()
@@ -53,48 +52,42 @@ class BtnFunct {
             evt.preventDefault();
             document.getElementById('finished_pages').value = ''; 
                */
-    }
-
-    arrayPush() {
-
-        for(let i = 0; i <  this.taskArray.length ; i++) {
-            let content = document.createElement("div");
-            content.setAttribute("id", "task_array");
-            content.classList.add("task_array");
-            task_tab.appendChild(content) 
-        };     
-    }
-
-    flowThruArr() {
-        for(let x = 0; x < this.taskArray.length; x++) {
-            console.log('jojo')
         }
-    }
 
-    openForm() {
-        document.getElementById('pop_up_form').style.display = "block";
+        arrayPush() {
+            for(let i = 0; i <  this.taskArray.length ; i++) {
+                let content = document.createElement("div");                //goes through 'taskArray' and creates divs for each one.
+                content.setAttribute("id", "task_array");
+                content.classList.add("task_array");
+                task_tab.appendChild(content) 
+            };     
+            this.taskBtn();
+        }
+        taskBtn() {
+            const taskBtn = document.querySelectorAll("#task_array");
+            taskBtn.forEach((task) => {
+                task.addEventListener('click', () => {
+                    console.log("taskBTN works")
+                })
+            })
+        }
+        openForm() {
+            document.getElementById('pop_up_form').style.display = "block";   
+        }
+        closeForm() {
+            document.getElementById("pop_up_form").style.display = "none";   
         
-    }
-
-    closeForm() {
-        document.getElementById("pop_up_form").style.display = "none";   
-       
-    }
-
-    submitCall() {
-        this.closeForm();
-        this.collectValues();
-    }
-    
-    
-
-   
-    placeBtn() {
-        this.submitBtn();
-        this.addTask();
-    }
-    
-};
+        }
+        submitCall() {
+            this.closeForm();
+            this.collectValues();
+        }   
+        placeBtn() {
+            this.submitBtn();
+            this.addTask();
+        }
+        
+    };
 
 let trial = new BtnFunct();
 

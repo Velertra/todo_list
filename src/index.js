@@ -16,7 +16,7 @@ import "./taskDiv.css";
 import "./btnFunct";
 
 
-import "./taskBtn";
 
+import "./taskBtn";
 
 

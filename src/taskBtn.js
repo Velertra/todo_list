@@ -11,18 +11,18 @@ class Taskbtn {
         });
     };
 
-    taskBtn() {
-        const taskBtn = document.querySelectorAll("#task_array");
+    /* taskBtn() {
+        const taskBtn = document.querySelectorAll("task_array");
         taskBtn.forEach((task) => {
-            task.addEventListener('click', () => {
+            task.addEventListener('click', () => {          //moved to btnFunct.js moducle
                 console.log("taskBTN works")
             })
         })
-    }
+    } */
     
     playAll() {
         this.fileBtn();
-        this.taskBtn();
+        //this.taskBtn();
     }
 };
 
