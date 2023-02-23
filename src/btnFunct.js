@@ -1,75 +1,71 @@
 import { runIt } from "./taskBtn"
 
 
+let taskArray = [];
 
-class BtnFunct {
-    addTask() {
-        document.querySelector("#add_task").addEventListener('click', () => {
-            this.openForm();
+
+function testersPlus(title, describe, dueDate, notes) {
+    this.title = title
+    this.describe = describe
+    this.dueDate = dueDate
+    this.notes = notes
+    this.makeItWork = function() {
+        console.log(title + ' ' + describe)
+    }
+    
+}
+
+
+class Btnfunct {
+    
+        addTask() {
+            document.querySelector("#add_task").addEventListener('click', () => {
+                this.openForm();
         })
     }
 
         submitBtn() {
           document.getElementById("pop_up_form").addEventListener ('submit', function(event) {
             event.preventDefault();
-            let submitCallBtn = new BtnFunct();
+            let submitCallBtn = new Btnfunct();
             submitCallBtn.submitCall();
             
         });
     };
     
-        holdArray() {
-            this.taskArray = ["momomom", "ejejeej"];
+        
+        
+        gangGang(title, describe, dueDate, notes) {
+            let p = new testersPlus(title, describe, dueDate, notes);
+            taskArray.push(p);
+            console.log(taskArray)
+            //hopefulTest.makeItWork();
             
         }
-        
-      /*   testersPlus(title, discribe, dueDate, notes) {
-            this.title = title
-            this.discribe = discribe
-            this.dueDate = dueDate
-            this.notes = notes
-            this.makeItWork = function() {
-                console.log(title + ' ' + discribe)
-            }
-            
-        } */
+       
 
         collectValues() {
-            this.holdArray();
-            this.titleNeeded = document.getElementById("title").value;            // pause the submit to store as
-            
+            this.title = document.getElementById("title").value;            // pause the submit to store as            
             document.getElementById('title').value = '';                          //variable. then removes text.
-            /* const let taskArray = []; tester = localStorage.setItem(titleNeeded, titleNeeded);
-            
-            const anotherTest = localStorage.getItem(titleNeeded);
-             */
-            
-            this.discribe = document.getElementById('description').value;               //function pulls value from the form 
+          
+            this.describe = document.getElementById('description').value;               //function pulls value from the form 
             document.getElementById('description').value = '';
 
-            this.taskArray.push(this.titleNeeded);
-            this.taskArray.push(this.discribe);
+            this.dueDate = document.getElementById('due_date').value; 
+            document.getElementById('due_date').value = '';
+
+            this.notes = document.getElementById('notes').value;
+            document.getElementById('notes').value = ''; 
+            //evt.preventDefault();
+
+            this.gangGang(this.title, this.describe, this.dueDate, this.notes)
+            
+            
             this.arrayPush();
-
-
-           // console.log(this.taskArray)
-
-            //this.arrayPush()
-            //console.log(this.taskArray);
-
- /*
-            pagesNeeded = document.getElementById('pages_read').value;    
-            evt.preventDefault();
-            document.getElementById('pages_read').value = '';
-
-            readNeeded = document.getElementById('finished_pages').value;    
-            evt.preventDefault();
-            document.getElementById('finished_pages').value = ''; 
-               */
         }
 
         arrayPush() {
-            for(let i = 0; i < this.taskArray.length ; i++) {
+            for(let i = 0; i < taskArray.length ; i++) {
                 let content = document.createElement("div");                //goes through 'taskArray' and creates divs for each one.
                 content.setAttribute("id", "task_array");
                 content.classList.add("task_array");
@@ -78,14 +74,6 @@ class BtnFunct {
             runIt.taskBtn();
         }
 
-        /* taskBtn() {
-            const taskBtn = document.querySelectorAll("#task_array");
-            taskBtn.forEach((task) => {
-                task.addEventListener('click', () => {
-                    console.log("taskBTN works")
-                })
-            })
-        } */
 
         openForm() {
             document.getElementById('pop_up_form').style.display = "block";   
@@ -98,8 +86,6 @@ class BtnFunct {
             this.collectValues();
         }   
         placeBtn() {
-            let hopefulTest = new testersPlus('joejoe', 'center')
-            testersPlus.makeItWork();
             this.submitBtn();
             this.addTask();
            // this.testersPlus('joejoe', 'center')
@@ -107,25 +93,16 @@ class BtnFunct {
     };
 
 
-    function testersPlus(title, discribe, dueDate, notes) {
-        this.title = title
-        this.discribe = discribe
-        this.dueDate = dueDate
-        this.notes = notes
-        this.makeItWork = function() {
-            console.log(title + ' ' + discribe)
-        }
-        
-    }
+
 
 
    // console.log(sheCute());
 
     //sheCute();
 
-let trial = new BtnFunct();
+let trial = new Btnfunct();
 
 trial.placeBtn();
 
 
-export { BtnFunct };
+export { Btnfunct };
