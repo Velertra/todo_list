@@ -1,6 +1,7 @@
 
 
 class Taskbtn {
+   
     fileBtn() {
         const taskFile = document.querySelectorAll("#multi_task");
         taskFile.forEach((task) => {
@@ -11,15 +12,6 @@ class Taskbtn {
         });
     };
 
-    /* taskBtn() {
-        const taskBtn = document.querySelectorAll("task_array");
-        taskBtn.forEach((task) => {
-            task.addEventListener('click', () => {          //moved to btnFunct.js moducle
-                console.log("taskBTN works")
-            })
-        })
-    } */
-
     taskBtn() {
         const taskBtn = document.querySelectorAll("#task_array");
         taskBtn.forEach((task) => {
@@ -29,19 +21,21 @@ class Taskbtn {
         })
     }
     
+    needATest() {
+        console.log('left right center')
+    }
+    
     playAll() {
         this.fileBtn();
         //this.taskBtn();
-        this.taskBtn();
+       // this.taskBtn();
     }
 };
 
 
-function sheCute() {
-    console.log('get it kid');
-}
 
 
 let runIt = new Taskbtn();
 
 runIt.playAll();
+export {runIt};

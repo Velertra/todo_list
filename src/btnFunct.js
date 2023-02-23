@@ -1,4 +1,4 @@
-import {sheCute} from "./taskBtn"
+import { runIt } from "./taskBtn"
 
 
 
@@ -22,6 +22,17 @@ class BtnFunct {
             this.taskArray = ["momomom", "ejejeej"];
             
         }
+        
+      /*   testersPlus(title, discribe, dueDate, notes) {
+            this.title = title
+            this.discribe = discribe
+            this.dueDate = dueDate
+            this.notes = notes
+            this.makeItWork = function() {
+                console.log(title + ' ' + discribe)
+            }
+            
+        } */
 
         collectValues() {
             this.holdArray();
@@ -64,7 +75,7 @@ class BtnFunct {
                 content.classList.add("task_array");
                 task_tab.appendChild(content) 
             };     
-           // this.taskBtn();
+            runIt.taskBtn();
         }
 
         /* taskBtn() {
@@ -87,16 +98,34 @@ class BtnFunct {
             this.collectValues();
         }   
         placeBtn() {
+            let hopefulTest = new testersPlus('joejoe', 'center')
+            testersPlus.makeItWork();
             this.submitBtn();
             this.addTask();
+           // this.testersPlus('joejoe', 'center')
         }
     };
 
 
-    sheCute()
+    function testersPlus(title, discribe, dueDate, notes) {
+        this.title = title
+        this.discribe = discribe
+        this.dueDate = dueDate
+        this.notes = notes
+        this.makeItWork = function() {
+            console.log(title + ' ' + discribe)
+        }
+        
+    }
+
+
+   // console.log(sheCute());
+
+    //sheCute();
 
 let trial = new BtnFunct();
 
 trial.placeBtn();
 
-export {BtnFunct};
+
+export { BtnFunct };
