@@ -1,4 +1,4 @@
-import { runIt } from "./taskBtn"
+import { finsihedProd } from "./clickOnTask"
 
 
 let taskArray = [];
@@ -38,7 +38,7 @@ class Btnfunct {
         gangGang(title, describe, dueDate, notes) {
             let p = new testersPlus(title, describe, dueDate, notes);
             taskArray.push(p);
-            console.log(taskArray)
+            //console.log(taskArray)
             //hopefulTest.makeItWork();
             
         }
@@ -65,13 +65,24 @@ class Btnfunct {
         }
 
         arrayPush() {
-            for(let i = 0; i < taskArray.length ; i++) {
+            /* for(let i = 0; i < taskArray.length ; i++) {
                 let content = document.createElement("div");                //goes through 'taskArray' and creates divs for each one.
                 content.setAttribute("id", "task_array");
                 content.classList.add("task_array");
-                task_tab.appendChild(content) 
-            };     
-            runIt.taskBtn();
+                content.setAttribute("name", i);
+                
+                task_tab.appendChild(content)
+            };      */
+           
+            
+            var crsq = document.createElement('div');
+            crsq.classList.add('task_array');
+            crsq.setAttribute('id', "task_array");
+            crsq.setAttribute('name', taskArray.length);
+            document.getElementsByClassName("task_tab")[0].appendChild(crsq);
+           // runIt.taskBtn(); //
+            finsihedProd.taskBtn();
+           
         }
 
 
@@ -104,5 +115,5 @@ let trial = new Btnfunct();
 
 trial.placeBtn();
 
-
+export { taskArray };
 export { Btnfunct };

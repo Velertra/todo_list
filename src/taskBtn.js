@@ -12,14 +12,14 @@ class Taskbtn {
         });
     };
 
-    taskBtn() {
+ /*    taskBtn() {
         const taskBtn = document.querySelectorAll("#task_array");
         taskBtn.forEach((task) => {
             task.addEventListener('click', () => {
                 console.log("taskBTN works")
             })
         })
-    }
+    } */
     
     needATest() {
         console.log('left right center')
@@ -38,4 +38,4 @@ class Taskbtn {
 let runIt = new Taskbtn();
 
 runIt.playAll();
-export {runIt};
+//export {runIt};

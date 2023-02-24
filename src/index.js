@@ -15,8 +15,8 @@ import "./taskDiv.css";
 
 import "./btnFunct";
 
-
+import "./clickOnTask.css"
 
 import "./taskBtn";
 
-
+import "./clickOnTask"
