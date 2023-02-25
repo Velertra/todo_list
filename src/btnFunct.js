@@ -79,8 +79,13 @@ class Btnfunct {
             crsq.classList.add('task_array');
             crsq.setAttribute('id', "task_array");
             crsq.setAttribute('name', taskArray.length);
+
+            //document.getElementsByTagName(taskArray.length) = taskArray.length
             document.getElementsByClassName("task_tab")[0].appendChild(crsq);
            // runIt.taskBtn(); //
+
+            crsq.innerHTML = (taskArray.length);
+            
             finsihedProd.taskBtn();
            
         }
@@ -117,3 +122,4 @@ trial.placeBtn();
 
 export { taskArray };
 export { Btnfunct };
+export { testersPlus };
