@@ -75,6 +75,13 @@ class clickOnTask {
             notes.innerHTML = 'Notes: ' + taskArray[buffy].notes;
             body_div.appendChild(notes);
         }
+        this.dueDiv = function() {
+            let dueDiv = document.createElement('div');
+            dueDiv.classList.add('date_div');
+            dueDiv.setAttribute('id', 'date_div');
+            dueDiv.innerHTML = 'Due Date: ' + taskArray[buffy].dueDate;
+            body_div.appendChild(dueDiv);
+        }
         this.removeDiv = function(parent) {
             while (parent.firstChild) {
               parent.removeChild(parent.firstChild)
@@ -99,10 +106,10 @@ class clickOnTask {
                 //console.log( taskArray[0].title)
                 let divRemoval = document.querySelector("#body_div");
                 this.removeDiv(divRemoval);
-                return [this.headline(), /* this.centerImg(), */ this.describeDiv(), this.notesDiv(), this.deleteBtn() ]
+                return [this.dueDiv(), this.headline(), /* this.centerImg(), */ this.describeDiv(), this.notesDiv(), this.deleteBtn() ]
             } else {
                 //console.log(typeof ozNum)
-                return [this.bodyDiv(), this.headline(), /* this.centerImg(), */ this.describeDiv(), this.notesDiv(), this.deleteBtn()]
+                return [this.bodyDiv(), this.dueDiv(), this.headline(), /* this.centerImg(), */ this.describeDiv(), this.notesDiv(), this.deleteBtn()]
             }
         }
     };
