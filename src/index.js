@@ -20,3 +20,5 @@ import "./clickOnTask.css"
 import "./taskBtn";
 
 import "./clickOnTask"
+
+import "./taskFiles"
