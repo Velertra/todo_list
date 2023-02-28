@@ -22,3 +22,7 @@ import "./taskBtn";
 import "./clickOnTask"
 
 import "./taskFiles"
+
+import "./taskFiles.css" 
+
+import "./taskBtn.css"

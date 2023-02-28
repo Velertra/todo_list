@@ -65,16 +65,6 @@ class Btnfunct {
         }
 
         arrayPush() {
-            /* for(let i = 0; i < taskArray.length ; i++) {
-                let content = document.createElement("div");                //goes through 'taskArray' and creates divs for each one.
-                content.setAttribute("id", "task_array");
-                content.classList.add("task_array");
-                content.setAttribute("name", i);
-                
-                task_tab.appendChild(content)
-            };      */
-           
-            
             var crsq = document.createElement('div');
             crsq.classList.add('task_array');
             crsq.setAttribute('id', "task_array");

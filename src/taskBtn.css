@@ -1,0 +1,16 @@
+.name_file {
+    display: none;
+    position: fixed;
+    background-color: rgb(158, 38, 110);
+    height: 80vmin;
+    width: 80vmin;
+    
+    right: 15px;
+    border: 3px solid #f2e7e7;
+    z-index: 9;
+}
+
+.enter_name {
+    height: 40px;
+    width: 50px;
+}

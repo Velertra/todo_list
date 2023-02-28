@@ -1,3 +1,4 @@
+import { myAddedFiles } from "./taskBtn.js"
 
 
 class Menudiv {
@@ -14,23 +15,23 @@ class Menudiv {
         menu_tab.appendChild(content)
     }
     taskMenu() {
-        let arrayTask = ["first task", "second task"];
 
-        for(let i = 0; i < 500/* arrayTask.length */; i++) {
-                let content = document.createElement("div");
-                content.setAttribute("id", "multi_task");
-                content.classList.add("multi_task");
-                main_task.appendChild(content) 
-        };
+        let content = document.createElement("div");
+        content.setAttribute("id", "multi_task");
+        content.classList.add("multi_task");
+        
+        main_task.appendChild(content) 
+       
     };
 
     allDivs() {
         this.addTask();
         this.mainTask();
-        this.taskMenu();
+        //this.taskMenu();
     }
 }
 
 let runMenuDiv = new Menudiv();
 
 runMenuDiv.allDivs();
+export { runMenuDiv };
