@@ -1,6 +1,11 @@
 import { myAddedFiles } from "./taskBtn.js"
 
 
+
+//import { Btnfunct } from "./btnFunct";
+
+
+
 class Menudiv {
     addTask() {
         let content = document.createElement("div");
@@ -23,6 +28,11 @@ class Menudiv {
         main_task.appendChild(content) 
        
     };
+
+    runThisFarCode() {
+        let WTF = new Btnfunct();
+
+    }
 
     allDivs() {
         this.addTask();

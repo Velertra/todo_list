@@ -1,4 +1,4 @@
-import {taskArray} from "./btnFunct"
+import { neededArr, finalArr, completeInfoArr, addFileName } from "./taskBtn"
 import { testersPlus } from "./btnFunct";
 
 
@@ -11,19 +11,21 @@ class clickOnTask {
     closeTask() {
         document.getElementById("task_display").style.display = "none";   
     }
-    taskBtn() {
-        let p = taskArray.length.toString();
+  /*   taskBtn() {
+        let p = hopeful.length.toString();
         const taskBtn = document.getElementsByName(p);
-        taskBtn.forEach((task) => {
-            task.addEventListener('click', () => {
+     
+        
+           taskBtn.forEach((task) => {
+            task.addEventListener('click', () => {          //when you push the green divs created to rep tasks
                 this.openTask();
                 this.onTheTaskForm(task);
                 
                 
                 
             })
-        })
-    }
+        }) 
+    }*/
 
     goThruTasks() {
         //document.querySelectorAll('#task_tab [id$=]').length
@@ -31,16 +33,32 @@ class clickOnTask {
 
     }
 
-    onTheTaskForm(oz) {
+    onTheTaskForm(oz, cocomo) {
 
         //let shishi = document.querySelectorAll('#task_tab [id$=task_array]').length
        /*  let gonnaWork = new testersPlus();
         gonnaWork.makeItWork(); */
         
-        let buffy = oz.innerHTML - 1;
+       let buffy = oz.getAttribute('name');
+       let replace = buffy.slice(-1);
 
-       //console.log(taskArray[buffy].title)
+      //console.log(oz)
+      
 
+      let runner = finalArr.filter(x => {
+        return x.fileName === neededArr;        //runner returns array filetered by the name of whatever file that was clicked
+    })
+
+    for(let x = 0; x < runner.length; x++){
+        //console.log(runner[x])
+      }
+
+      let hopeful = runner[replace];
+      //let jsonTrial = JSON.stringify(hopeful)
+      console.log(hopeful.arr.title)
+
+
+      
         this.bodyDiv = function() {    
             let bodyContainer = document.createElement("div");
             bodyContainer.classList.add("body_div");
@@ -52,7 +70,7 @@ class clickOnTask {
             let topDiv = document.createElement('div');
             topDiv.classList.add("topDiv")
             topDiv.setAttribute('id', "topDiv")
-            topDiv.innerHTML = "Task: " + taskArray[buffy].title;
+            topDiv.innerHTML = "Task: " + hopeful.arr.title;
             body_div.appendChild(topDiv);         
         }          
         /* this.centerImg = function() {
@@ -65,21 +83,21 @@ class clickOnTask {
             let describeDiv = document.createElement('div');
             describeDiv.classList.add("discription");
             describeDiv.setAttribute('id', 'discription');
-            describeDiv.innerHTML = "Describe: " + taskArray[buffy].describe;
+            describeDiv.innerHTML = "Describe: " + hopeful.arr.describe;
             body_div.appendChild(describeDiv);
         }
         this.notesDiv = function() {
             let notes = document.createElement('div');
             notes.classList.add("discription");
             notes.setAttribute('id', 'discription');
-            notes.innerHTML = 'Notes: ' + taskArray[buffy].notes;
+            notes.innerHTML = 'Notes: ' + hopeful.arr.notes;
             body_div.appendChild(notes);
         }
         this.dueDiv = function() {
             let dueDiv = document.createElement('div');
             dueDiv.classList.add('date_div');
             dueDiv.setAttribute('id', 'date_div');
-            dueDiv.innerHTML = 'Due Date: ' + taskArray[buffy].dueDate;
+            dueDiv.innerHTML = 'Due Date: ' + hopeful.arr.dueDate;
             body_div.appendChild(dueDiv);
         }
         this.removeDiv = function(parent) {
@@ -103,7 +121,7 @@ class clickOnTask {
         }
     let contentLength = document.getElementsByClassName("body_div")
         if (contentLength.length > 0) {
-                //console.log( taskArray[0].title)
+                //console.log( hopeful[0].title)
                 let divRemoval = document.querySelector("#body_div");
                 this.removeDiv(divRemoval);
                 return [this.dueDiv(), this.headline(), /* this.centerImg(), */ this.describeDiv(), this.notesDiv(), this.deleteBtn() ]
