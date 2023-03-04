@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: nowrap;
     overflow: auto;
-    order: 3;
+    order: 4;
     
 
 }
@@ -33,6 +33,14 @@
     background-color: black;
     width: 6vmin;
     height: 3vmin;
+    margin: 2vmin;
+    order: 3;
+}
+
+.home_btn {
+    background-color: white;
+    width: 6vmin;
+    height: 6vmin;
     margin: 2vmin;
     order: 2;
 }

@@ -81,8 +81,8 @@ class Taskbtn {
         
     };
 
-    runThisCode(chicken) {
-        console.log(chicken)
+    runThisCode() {
+        
     }
 
     taskBtn() {
@@ -195,9 +195,13 @@ class Taskbtn {
     }
     
     needATest() {
-            document.getElementById('list_add').addEventListener("click", function(){ 
+            document.getElementById('list_add').addEventListener("click", function(e){ 
                 let creation = new Taskbtn();                                           //when you push the black button
                 creation.openFileDiv();
+                let expo = document.getElementById('content');
+                if (!expo.contains(e.target)) {
+                    container.style.display = 'none';
+                }
             })
         }
 
@@ -222,6 +226,18 @@ class Taskbtn {
             
         })
     }    
+
+    closeAddedFile() {
+        let content = document.createElement("buton");
+        content.setAttribute("id", "close_add_file");
+        content.classList.add("close_add_file");
+        content.innerHTML = 'close';
+        name_file.appendChild(content)
+        content.addEventListener("click", function() {     //close add file form
+            let runItPlus = new Taskbtn();
+            runItPlus.closeFileDiv();
+        })
+    }
 
     openFileDiv() {
         document.getElementById('name_file').style.display = "block";
@@ -259,6 +275,7 @@ class Taskbtn {
         this.needATest();
         this.newFileDiv();
         this.createThisDiv();
+        this.closeAddedFile();
         //this.createFileSlot();
         //this.fileBtn();
         if(addFileName.length == null){

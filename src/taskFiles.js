@@ -12,6 +12,37 @@ window.onclick = function(event) {
   }
 }
 
+/* window.onclick = function(event){
+  document.onclick = function(e){
+    if(e.target.id == 'backgroundOverlay'){
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+    if(e.target === openButton){
+      popup.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+  };
+}; */
+
+window.onclick = function(event) {
+  if (!event.target.matches('.list_add')) {
+    var dropdowns = document.getElementsByClassName("name_file");
+    var i = documen.getElementsByClassName('content');
+   
+      //console.log(typeof openDropdown.style.display)
+      if(e.target.id == 'content'){
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+    if(e.target === dropdowns){
+      popup.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+    
+  }
+}
+
   class taskFiles {
 
       clickTheDropDown() {      

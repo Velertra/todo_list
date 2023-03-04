@@ -19,6 +19,14 @@ class Menudiv {
         content.classList.add("main_task");
         menu_tab.appendChild(content)
     }
+
+    homeBtn() {
+        let content = document.createElement("div");
+        content.setAttribute("id", "home_btn");
+        content.classList.add("home_btn");
+        menu_tab.appendChild(content)
+    }
+
     taskMenu() {
 
         let content = document.createElement("div");
@@ -37,6 +45,7 @@ class Menudiv {
     allDivs() {
         this.addTask();
         this.mainTask();
+        this.homeBtn();
         //this.taskMenu();
     }
 }
