@@ -71,8 +71,8 @@ class Taskbtn {
         for(let x = 0; x < helper.length; x++){
           
                 helper[x].addEventListener("click", function() {        //btn on each blue div created for new files
-                let runTheDisplay = new Taskbtn();
-                runTheDisplay.setNameAtt(helper[x]);
+                let runTheDisplay = new Taskbtn();                      
+                runTheDisplay.setNameAtt(helper[x]);                
                 runTheDisplay.taskBtn();
                 //friendlyArr.push(helper[x])
                 //runTheDisplay.runThisCode(friendlyArr);
@@ -95,20 +95,11 @@ class Taskbtn {
                 helper[x].addEventListener("click", function() {        //btn on each green div created for task Array
                 finsihedProd.openTask();
                 finsihedProd.onTheTaskForm(helper[x], friendlyArr)
-           }); 
+           }) 
         };
+    };
 
-        
-        /*    taskBtn.forEach((task) => {
-            task.addEventListener('click', () => {          //when you push the green divs created to rep tasks
-                this.openTask();
-                this.onTheTaskForm(task);
-                
-                
-                
-            })
-        }) */
-    }
+            
 
             setNameAtt(jojo) { 
                 //let friendlyArr = [];
@@ -124,6 +115,7 @@ class Taskbtn {
                 
 
                 }
+               
                 
             runThruArr(cocomo, placeToGo) {
                 //console.log(placeToGo)
@@ -175,6 +167,15 @@ class Taskbtn {
               parent.removeChild(parent.firstChild)
             }
           
+    }
+
+    homeBtnFunt() {
+        document.getElementById('home_btn').addEventListener('click', function(){
+            console.log('lawerbeast')
+            let needed = new Taskbtn();
+            needed.runThruArr(finalArr);
+            needed.taskBtn();
+        })
     }
 
     createFileSlot() {
@@ -276,6 +277,7 @@ class Taskbtn {
         this.newFileDiv();
         this.createThisDiv();
         this.closeAddedFile();
+        this.homeBtnFunt();
         //this.createFileSlot();
         //this.fileBtn();
         if(addFileName.length == null){
