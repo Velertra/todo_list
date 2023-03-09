@@ -33,9 +33,8 @@ class clickOnTask {
 
     }
 
-    onTheTaskForm(oz, cocomo) {
-
-        //let shishi = document.querySelectorAll('#task_tab [id$=task_array]').length
+    runThisFirst(oz, cocomo) {
+         //let shishi = document.querySelectorAll('#task_tab [id$=task_array]').length
        /*  let gonnaWork = new testersPlus();
         gonnaWork.makeItWork(); */
         
@@ -57,6 +56,13 @@ class clickOnTask {
       //let jsonTrial = JSON.stringify(hopeful)
       console.log(hopeful.arr.title)
 
+      this.onTheTaskForm(hopeful);
+
+    }
+
+    onTheTaskForm(chyea) {
+
+       console.log(chyea)
 
       
         this.bodyDiv = function() {    
@@ -137,6 +143,6 @@ class clickOnTask {
 
 let finsihedProd = new clickOnTask();
 
-//finsihedProd.finshedFunc();
+
 
 export { finsihedProd };

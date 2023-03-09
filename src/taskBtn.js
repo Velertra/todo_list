@@ -94,7 +94,7 @@ class Taskbtn {
           
                 helper[x].addEventListener("click", function() {        //btn on each green div created for task Array
                 finsihedProd.openTask();
-                finsihedProd.onTheTaskForm(helper[x], friendlyArr)
+                finsihedProd.runThisFirst(helper[x], friendlyArr)
            }) 
         };
     };
@@ -140,7 +140,7 @@ class Taskbtn {
                         var crsq = document.createElement('div');
                         crsq.classList.add('task_array');
                         crsq.setAttribute('id', "task_array");
-                        crsq.setAttribute('name', completeInfoArr.length);
+                        crsq.setAttribute('name', 'task_array'+ '_' + x);
                         document.getElementsByClassName("task_tab")[0].appendChild(crsq);      //HOME DIVS
                         //crsq.innerHTML = (completeInfoArr.length);
                     }
@@ -171,9 +171,10 @@ class Taskbtn {
 
     homeBtnFunt() {
         document.getElementById('home_btn').addEventListener('click', function(){
-            console.log('lawerbeast')
+            console.log('lawerbeast')                                                   //home Btn should show all tasks
             let needed = new Taskbtn();
-            needed.runThruArr(finalArr);
+            
+            needed.fullArrDiv(finalArr);
             needed.taskBtn();
         })
     }
