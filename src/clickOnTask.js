@@ -70,7 +70,7 @@ class clickOnTask {
             bodyContainer.classList.add("body_div");
             bodyContainer.setAttribute('id', 'body_div');
             //let trailDiv = document.querySelector("#body_div");
-            task_display.appendChild(bodyContainer);
+            task_display.appendChild(bodyContainer); 
         }  
         this.headline = function() {
             let topDiv = document.createElement('div');

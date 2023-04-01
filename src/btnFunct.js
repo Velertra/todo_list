@@ -12,6 +12,8 @@ class Btnfunct {
         })
     }
 
+    
+
         submitBtn() {
           document.getElementById("pop_up_form").addEventListener ('submit', function(event) {
             event.preventDefault();
