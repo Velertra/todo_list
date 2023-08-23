@@ -30,3 +30,5 @@ import "./taskFiles.css"
 import "./taskBtn.css"
 
 import "./newAddition"
+
+import "./practiceDivs"
